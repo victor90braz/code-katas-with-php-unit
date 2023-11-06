@@ -19,3 +19,6 @@ composer.json
 
 run
 composer dump-autoload
+composer require --dev phpunit/phpunit
+composer update
+vendor/bin/phpunit tests/PrimeFactorsTest.php
