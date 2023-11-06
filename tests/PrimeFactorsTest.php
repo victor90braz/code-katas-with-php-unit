@@ -9,16 +9,12 @@ class PrimeFactorsTest extends TestCase {
    * @test
    * @dataProvider factors
    * */
-  function it_generates_prime_factors_for_1($foo, $bar)
+  function it_generates_prime_factors_for_1($number, $expected)
   {
 
-    /*
     $factors = new PrimeFactors();
 
-    $this->assertEquals([], $factors->generate(1));
-    */
-
-    var_dump($foo);
+    $this->assertEquals($expected, $factors->generate($number));
   }
 
   /** @test */
@@ -48,10 +44,10 @@ class PrimeFactorsTest extends TestCase {
     $this->assertEquals([2,2], $factors->generate(4));
   }
 
-  public function factors()
+  public static function factors()
   {
     return [
-      ['foo', 'bar']
+      [1, []]
     ];
   }
 }
