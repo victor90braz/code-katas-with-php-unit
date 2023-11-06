@@ -19,7 +19,7 @@ class RomanNumeralsTest extends TestCase {
     return [
         [1, "I"],
         [2, "II"],
-        // Add more test cases here
+        [3, "III"],
       ];
   }
 }

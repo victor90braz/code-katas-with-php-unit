@@ -6,10 +6,14 @@ class RomanNumerals {
 
   public static function generate($number)
   {
-    if ($number > 1) {
-      return "II";
+    $result = '';
+
+    while ($number > 0) {
+      $result .= 'I'; // Use the '.' operator for string concatenation
+
+      $number -= 1;
     }
 
-    return 'I';
+    return $result;
   }
 }
