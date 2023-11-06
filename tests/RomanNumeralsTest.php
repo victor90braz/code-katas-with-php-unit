@@ -5,18 +5,21 @@ use \App\RomanNumerals;
 
 class RomanNumeralsTest extends TestCase {
 
-  /** @test */
-  public function it_generates_the_roman_numeral_for_1 ()
+  /**
+   * @test
+   * @dataProvider checks
+   */
+  public function it_generates_the_roman_numeral_for_numbers($number, $numeral)
   {
-    $this->assertEquals('I', RomanNumerals::generate(1));
+    $romanNumerals = new RomanNumerals();
+    $this->assertEquals($numeral, $romanNumerals->generate($number));
   }
 
-  /** @test */
-  public function it_generates_the_roman_numeral_for_2 ()
-  {
-    $this->assertEquals('II', RomanNumerals::generate(2));
+  public static function checks() {
+    return [
+        [1, "I"],
+        [2, "II"],
+        // Add more test cases here
+      ];
   }
-
-
-
 }
