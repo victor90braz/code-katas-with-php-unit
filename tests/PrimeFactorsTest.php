@@ -20,7 +20,15 @@ class PrimeFactorsTest extends TestCase {
   public static function factors()
   {
     return [
-      [1, []]
+      [1, []],
+      [2, [2]],
+      [3, [3]],
+      [4, [2,2]],
+      [5, [5]],
+      [6, [2,3]],
+      [7, [7]],
+      [8, [2,2,2]],
+      [100, [2,2,5,5]]
     ];
   }
 }
