@@ -5,13 +5,20 @@ use \App\PrimeFactors;
 
 class PrimeFactorsTest extends TestCase {
 
-  /** @test */
-  function it_generates_prime_factors_for_1()
+  /**
+   * @test
+   * @dataProvider factors
+   * */
+  function it_generates_prime_factors_for_1($foo, $bar)
   {
 
+    /*
     $factors = new PrimeFactors();
 
     $this->assertEquals([], $factors->generate(1));
+    */
+
+    var_dump($foo);
   }
 
   /** @test */
@@ -39,5 +46,12 @@ class PrimeFactorsTest extends TestCase {
     $factors = new PrimeFactors();
 
     $this->assertEquals([2,2], $factors->generate(4));
+  }
+
+  public function factors()
+  {
+    return [
+      ['foo', 'bar']
+    ];
   }
 }
