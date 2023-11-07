@@ -15,7 +15,7 @@ class RomanNumerals {
     'XL' => 40,
     'X'  => 10,
     'IX' => 9,
-    'V'  => 5,
+    'V' => 5,
     'IV' => 4,
     'I'  => 1,
   ];
@@ -25,9 +25,8 @@ class RomanNumerals {
     $result = '';
 
     foreach(static::NUMERALS as $numeral => $arabic) {
-      while ($number >= $arabic) {
+      for (; $number >= $arabic; $number -= $arabic) {
         $result .= $numeral;
-        $number -= $arabic;
       }
     }
 
